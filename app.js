@@ -20,6 +20,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/message", messageRouter)
 
+app.get("/", (req, res) => {
+    return res.json("Hello, public")
+})
+
 dbConnection()
 
 export default app;
